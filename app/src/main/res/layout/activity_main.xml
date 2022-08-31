@@ -7,24 +7,144 @@
     tools:context=".MainActivity">
 
     <EditText
+        android:id="@+id/q4"
+        android:layout_width="87dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="7dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/q5"
+        app:layout_constraintEnd_toStartOf="@+id/peso4"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/q5"
+        android:layout_width="87dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/q6"
+        app:layout_constraintEnd_toStartOf="@+id/peso5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/q6"
+        android:layout_width="87dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/q7"
+        app:layout_constraintEnd_toStartOf="@+id/peso6"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/q7"
+        android:layout_width="87dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/q8"
+        app:layout_constraintEnd_toStartOf="@+id/peso7"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/q8"
+        android:layout_width="87dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/q9"
+        app:layout_constraintEnd_toStartOf="@+id/peso8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/q9"
+        android:layout_width="87dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/q10"
+        app:layout_constraintEnd_toStartOf="@+id/peso9"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/q10"
+        android:layout_width="87dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="156dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/peso10"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/q3"
+        android:layout_width="87dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/q4"
+        app:layout_constraintEnd_toStartOf="@+id/peso3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/q2"
+        android:layout_width="87dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/q3"
+        app:layout_constraintEnd_toStartOf="@+id/peso2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
         android:id="@+id/peso1"
         android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="9dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Digite o peso..."
         android:inputType="numberDecimal"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/peso2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toEndOf="@+id/q1"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/peso2"
         android:layout_width="150dp"
-        android:layout_height="30dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Digite o peso..."
@@ -32,14 +152,14 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/peso3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toEndOf="@+id/q2"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/peso3"
         android:layout_width="150dp"
-        android:layout_height="30dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="12dp"
         android:ems="10"
         android:hint="Digite o peso..."
@@ -47,14 +167,14 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/peso4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toEndOf="@+id/q3"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/peso4"
         android:layout_width="150dp"
-        android:layout_height="30dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="7dp"
         android:ems="10"
         android:hint="Digite o peso..."
@@ -62,14 +182,14 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/peso5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toEndOf="@+id/q4"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/peso5"
         android:layout_width="150dp"
-        android:layout_height="30dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="13dp"
         android:ems="10"
         android:hint="Digite o peso..."
@@ -77,13 +197,13 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/peso6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toEndOf="@+id/q5" />
 
     <EditText
         android:id="@+id/peso7"
         android:layout_width="150dp"
-        android:layout_height="30dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="17dp"
         android:ems="10"
         android:hint="Digite o peso..."
@@ -91,13 +211,13 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/peso8"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toEndOf="@+id/q7" />
 
     <EditText
         android:id="@+id/peso6"
         android:layout_width="150dp"
-        android:layout_height="30dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="14dp"
         android:ems="10"
         android:hint="Digite o peso..."
@@ -105,13 +225,13 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/peso7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toEndOf="@+id/q6" />
 
     <EditText
         android:id="@+id/peso8"
         android:layout_width="150dp"
-        android:layout_height="30dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="18dp"
         android:ems="10"
         android:hint="Digite o peso..."
@@ -119,13 +239,13 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/peso9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toEndOf="@+id/q8" />
 
     <EditText
         android:id="@+id/peso9"
         android:layout_width="150dp"
-        android:layout_height="30dp"
+        android:layout_height="35dp"
         android:layout_marginBottom="18dp"
         android:ems="10"
         android:hint="Digite o peso..."
@@ -133,22 +253,22 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/peso10"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toEndOf="@+id/q9" />
 
     <EditText
         android:id="@+id/peso10"
         android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:layout_marginBottom="47dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="16dp"
         android:ems="10"
         android:hint="Digite o peso..."
         android:inputType="numberDecimal"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/resultado"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toEndOf="@+id/q10"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
@@ -156,20 +276,64 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="63dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="16dp"
         android:onClick="calculaPeso"
         android:text="CALCULAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintHorizontal_bias="0.374"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/resultado"
         android:layout_width="105dp"
         android:layout_height="56dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/calcular"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/q1"
+        android:layout_width="87dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="9dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/q2"
+        app:layout_constraintEnd_toStartOf="@+id/peso1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="28dp"
+        android:text="Peso por caixa"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toTopOf="@+id/peso1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="17dp"
+        android:text="Quantidade por caixa"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toTopOf="@+id/q1"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
