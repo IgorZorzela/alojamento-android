@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                     int q9 = Integer.parseInt(String.valueOf(qt9.getText()));
                     int q10 = Integer.parseInt(String.valueOf(qt10.getText()));
 
-                    float resultt = (p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10) / (q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10);
+                    float resultt = (q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10) / (p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10);
                     result.setText("O peso médio é de: \n" + resultt + "g");
 
             }

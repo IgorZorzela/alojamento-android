@@ -9,7 +9,7 @@ android {
         applicationId "com.sitio.alojamento"
         minSdk 26
         targetSdk 32
-        versionCode 2
+        versionCode 3
         versionName "1.0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
