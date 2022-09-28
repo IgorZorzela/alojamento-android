@@ -95,8 +95,8 @@ public class MainActivity extends AppCompatActivity {
                     cal1 = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10;
                     cal2 = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10;
 
-                    float resultt = (cal1 / cal2) * 10;
-                    result.setText("O peso médio é de: \n" + resultt%.2f + "g");
+                    float resultt = (cal1 / cal2) * 1000;
+                    result.setText("O peso médio é de: \n" + resultt + "g");
 
             }
         });
