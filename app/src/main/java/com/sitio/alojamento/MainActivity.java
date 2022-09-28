@@ -103,11 +103,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /*public void calculaPeso(View view){
-
-        resultado = (peso1 + peso2 + peso3 + peso4 + peso5 + peso6 + peso7 + peso8 + peso9 + peso10) / 10 * 10;
-        TextView result = findViewById(R.id.resultado);
-        result.setText();
-            }
-     */
 }
