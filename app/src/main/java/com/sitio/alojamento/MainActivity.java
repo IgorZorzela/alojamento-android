@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText qt10;
     private TextView result;
     private Button calcular;
+    private float cal1;
+    private float cal2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,8 +92,11 @@ public class MainActivity extends AppCompatActivity {
                     int q9 = Integer.parseInt(String.valueOf(qt9.getText()));
                     int q10 = Integer.parseInt(String.valueOf(qt10.getText()));
 
-                    float resultt = (q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10) / (p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10);
-                    result.setText("O peso médio é de: \n" + resultt + "g");
+                    cal1 = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10;
+                    cal2 = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10;
+
+                    float resultt = (cal1 / cal2) * 10;
+                    result.setText("O peso médio é de: \n" + resultt%.2f + "g");
 
             }
         });
