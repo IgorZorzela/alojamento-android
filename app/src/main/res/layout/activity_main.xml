@@ -290,6 +290,7 @@
         android:layout_height="56dp"
         android:layout_marginBottom="20dp"
         android:textAlignment="center"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/calcular"
         app:layout_constraintEnd_toEndOf="parent"
