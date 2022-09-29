@@ -69,10 +69,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                /*if (p1 || p2 || p3 || p4 || p5 || p6 || p7 || p8 || p9 || p10 == null) {
-                    Toast.makeText(MainActivity.this, "Preencha os campos", Toast.LENGTH_SHORT).show();
-                }
-                */
                     float p1 = Float.parseFloat(String.valueOf(peso1.getText()));
                     float p2 = Float.parseFloat(String.valueOf(peso2.getText()));
                     float p3 = Float.parseFloat(String.valueOf(peso3.getText()));
