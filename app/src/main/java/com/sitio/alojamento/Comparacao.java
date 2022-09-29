@@ -9,9 +9,6 @@ public class Comparacao extends MainActivity {
         if (peso1.getText().toString().isEmpty()) {
             calcular.setEnabled(false);
             Toast.makeText(Comparacao.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
-        } else if(peso1.getText().toString().isEmpty()){
-            calcular.setEnabled(false);
-            Toast.makeText(Comparacao.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
         }
         else if(peso2.getText().toString().isEmpty()){
             calcular.setEnabled(false);

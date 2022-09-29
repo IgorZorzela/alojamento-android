@@ -11,6 +11,7 @@ import android.widget.Toast;
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
+    Comparacao Comp = new Comparacao();
 
     public EditText peso1;
     public EditText peso2;
@@ -89,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
                     int q8 = Integer.parseInt(String.valueOf(qt8.getText()));
                     int q9 = Integer.parseInt(String.valueOf(qt9.getText()));
                     int q10 = Integer.parseInt(String.valueOf(qt10.getText()));
+
+                    Comp.comparaCampos();
 
 
                     cal1 = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10;
