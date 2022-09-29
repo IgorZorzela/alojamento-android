@@ -12,28 +12,28 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText peso1;
-    private EditText peso2;
-    private EditText peso3;
-    private EditText peso4;
-    private EditText peso5;
-    private EditText peso6;
-    private EditText peso7;
-    private EditText peso8;
-    private EditText peso9;
-    private EditText peso10;
-    private EditText qt1;
-    private EditText qt2;
-    private EditText qt3;
-    private EditText qt4;
-    private EditText qt5;
-    private EditText qt6;
-    private EditText qt7;
-    private EditText qt8;
-    private EditText qt9;
-    private EditText qt10;
-    private TextView result;
-    private Button calcular;
+    public EditText peso1;
+    public EditText peso2;
+    public EditText peso3;
+    public EditText peso4;
+    public EditText peso5;
+    public EditText peso6;
+    public EditText peso7;
+    public EditText peso8;
+    public EditText peso9;
+    public EditText peso10;
+    public EditText qt1;
+    public EditText qt2;
+    public EditText qt3;
+    public EditText qt4;
+    public EditText qt5;
+    public EditText qt6;
+    public EditText qt7;
+    public EditText qt8;
+    public EditText qt9;
+    public EditText qt10;
+    public TextView result;
+    public Button calcular;
     private float cal1;
     private float cal2;
 
@@ -89,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     int q8 = Integer.parseInt(String.valueOf(qt8.getText()));
                     int q9 = Integer.parseInt(String.valueOf(qt9.getText()));
                     int q10 = Integer.parseInt(String.valueOf(qt10.getText()));
+
 
                     cal1 = p1 + p2 + p3 + p4 + p5 + p6 + p7 + p8 + p9 + p10;
                     cal2 = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10;
