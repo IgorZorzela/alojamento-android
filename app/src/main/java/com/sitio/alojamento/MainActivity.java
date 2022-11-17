@@ -2,6 +2,7 @@ package com.sitio.alojamento;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,8 +12,6 @@ import android.widget.Toast;
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
-    Comparacao Comp = new Comparacao();
-
     public EditText peso1;
     public EditText peso2;
     public EditText peso3;
@@ -37,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     public Button calcular;
     private float cal1;
     private float cal2;
+    public boolean validar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,11 +65,11 @@ public class MainActivity extends AppCompatActivity {
         qt10 = findViewById(R.id.q10);
         result = findViewById(R.id.resultado);
         calcular = findViewById(R.id.calcular);
-        Comp.comparaCampos();
 
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                validar = comparaCampos();
 
                     float p1 = Float.parseFloat(String.valueOf(peso1.getText()));
                     float p2 = Float.parseFloat(String.valueOf(peso2.getText()));
@@ -104,6 +104,157 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private boolean validarForm() {
+
+        boolean retorno = false;
+
+        if(!TextUtils.isEmpty(qt1.getText().toString())){
+            retorno = true;
+
+        } else{
+            qt1.setError("preenca todos os campos");
+            qt1.requestFocus();
+        }
+
+        if(!TextUtils.isEmpty(peso2.getText().toString())){
+            retorno = true;
+
+        } else{
+            peso2.setError("preenca todos os campos");
+            peso2.requestFocus();
+        }
+        if(!TextUtils.isEmpty(peso3.getText().toString())){
+            retorno = true;
+
+        } else{
+            peso3.setError("preenca todos os campos");
+            peso3.requestFocus();
+        }
+        if(!TextUtils.isEmpty(peso4.getText().toString())){
+            retorno = true;
+
+        } else{
+            peso4.setError("preenca todos os campos");
+            peso4.requestFocus();
+        }
+        if(!TextUtils.isEmpty(peso5.getText().toString())){
+            retorno = true;
+
+        } else{
+            peso5.setError("preenca todos os campos");
+            peso5.requestFocus();
+        }
+        if(!TextUtils.isEmpty(peso6.getText().toString())){
+            retorno = true;
+
+        } else{
+            peso6.setError("preenca todos os campos");
+            peso6.requestFocus();
+        }
+        if(!TextUtils.isEmpty(peso7.getText().toString())){
+            retorno = true;
+
+        } else{
+            peso7.setError("preenca todos os campos");
+            peso7.requestFocus();
+        }
+        if(!TextUtils.isEmpty(peso8.getText().toString())){
+            retorno = true;
+
+        } else{
+            peso8.setError("preenca todos os campos");
+            peso8.requestFocus();
+        }
+        if(!TextUtils.isEmpty(peso9.getText().toString())){
+            retorno = true;
+
+        } else{
+            peso9.setError("preenca todos os campos");
+            peso9.requestFocus();
+        }
+        if(!TextUtils.isEmpty(peso10.getText().toString())){
+            retorno = true;
+
+        } else{
+            peso10.setError("preenca todos os campos");
+            peso10.requestFocus();
+        }
+        if(!TextUtils.isEmpty(peso1.getText().toString())){
+            retorno = true;
+
+        } else{
+            peso1.setError("preenca todos os campos");
+            peso1.requestFocus();
+        }
+
+        if(!TextUtils.isEmpty(qt2.getText().toString())){
+            retorno = true;
+
+        } else{
+            qt2.setError("preenca todos os campos");
+            qt2.requestFocus();
+        }
+        if(!TextUtils.isEmpty(qt3.getText().toString())){
+            retorno = true;
+
+        } else{
+            qt3.setError("preenca todos os campos");
+            qt3.requestFocus();
+        }
+        if(!TextUtils.isEmpty(qt4.getText().toString())){
+            retorno = true;
+
+        } else{
+            qt4.setError("preenca todos os campos");
+            qt4.requestFocus();
+        }
+        if(!TextUtils.isEmpty(qt5.getText().toString())){
+            retorno = true;
+
+        } else{
+            qt5.setError("preenca todos os campos");
+            qt5.requestFocus();
+        }
+        if(!TextUtils.isEmpty(qt6.getText().toString())){
+            retorno = true;
+
+        } else{
+            qt6.setError("preenca todos os campos");
+            qt6.requestFocus();
+        }
+        if(!TextUtils.isEmpty(qt7.getText().toString())){
+            retorno = true;
+
+        } else{
+            qt7.setError("preenca todos os campos");
+            qt7.requestFocus();
+        }
+        if(!TextUtils.isEmpty(qt8.getText().toString())){
+            retorno = true;
+
+        } else{
+            qt8.setError("preenca todos os campos");
+            qt8.requestFocus();
+        }
+        if(!TextUtils.isEmpty(qt9.getText().toString())){
+            retorno = true;
+
+        } else{
+            qt9.setError("preenca todos os campos");
+            qt9.requestFocus();
+        }
+        if(!TextUtils.isEmpty(qt10.getText().toString())){
+            retorno = true;
+
+        } else{
+            qt10.setError("preenca todos os campos");
+            qt10.requestFocus();
+        }
+
+
+        return retorno;
     }
 
 }
