@@ -2,7 +2,9 @@ package com.sitio.alojamento;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public EditText peso1;
@@ -36,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     public Button calcular;
     private float cal1;
     private float cal2;
-    public boolean validar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +69,32 @@ public class MainActivity extends AppCompatActivity {
         qt10 = findViewById(R.id.q10);
         result = findViewById(R.id.resultado);
         calcular = findViewById(R.id.calcular);
+        calcular.setEnabled(false);
+
+        peso1.addTextChangedListener(textWatcher);
+        peso2.addTextChangedListener(textWatcher);
+        peso3.addTextChangedListener(textWatcher);
+        peso4.addTextChangedListener(textWatcher);
+        peso5.addTextChangedListener(textWatcher);
+        peso6.addTextChangedListener(textWatcher);
+        peso7.addTextChangedListener(textWatcher);
+        peso8.addTextChangedListener(textWatcher);
+        peso9.addTextChangedListener(textWatcher);
+        peso10.addTextChangedListener(textWatcher);
+        qt1.addTextChangedListener(textWatcher);
+        qt2.addTextChangedListener(textWatcher);
+        qt3.addTextChangedListener(textWatcher);
+        qt4.addTextChangedListener(textWatcher);
+        qt5.addTextChangedListener(textWatcher);
+        qt6.addTextChangedListener(textWatcher);
+        qt7.addTextChangedListener(textWatcher);
+        qt8.addTextChangedListener(textWatcher);
+        qt9.addTextChangedListener(textWatcher);
+        qt10.addTextChangedListener(textWatcher);
 
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                validar = comparaCampos();
-
                     float p1 = Float.parseFloat(String.valueOf(peso1.getText()));
                     float p2 = Float.parseFloat(String.valueOf(peso2.getText()));
                     float p3 = Float.parseFloat(String.valueOf(peso3.getText()));
@@ -106,155 +130,49 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private boolean validarForm() {
+    private TextWatcher textWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-        boolean retorno = false;
-
-        if(!TextUtils.isEmpty(qt1.getText().toString())){
-            retorno = true;
-
-        } else{
-            qt1.setError("preenca todos os campos");
-            qt1.requestFocus();
         }
 
-        if(!TextUtils.isEmpty(peso2.getText().toString())){
-            retorno = true;
+        @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            String a = peso1.getText().toString();
+            String b = peso2.getText().toString();
+            String c = peso3.getText().toString();
+            String d = peso4.getText().toString();
+            String e = peso5.getText().toString();
+            String f = peso6.getText().toString();
+            String g = peso7.getText().toString();
+            String h = peso8.getText().toString();
+            String j = peso9.getText().toString();
+            String k = peso10.getText().toString();
+            String l = qt1.getText().toString();
+            String m = qt2.getText().toString();
+            String n = qt3.getText().toString();
+            String o = qt4.getText().toString();
+            String p = qt5.getText().toString();
+            String q = qt6.getText().toString();
+            String r = qt7.getText().toString();
+            String s = qt8.getText().toString();
+            String t = qt9.getText().toString();
+            String u = qt10.getText().toString();
 
-        } else{
-            peso2.setError("preenca todos os campos");
-            peso2.requestFocus();
-        }
-        if(!TextUtils.isEmpty(peso3.getText().toString())){
-            retorno = true;
+            if(!a.isEmpty() && !b.isEmpty() && !c.isEmpty() && !d.isEmpty() && !e.isEmpty() && !f.isEmpty() && !g.isEmpty() && !h.isEmpty() && !j.isEmpty() && !k.isEmpty() && !l.isEmpty() && !m.isEmpty() && !n.isEmpty() && !o.isEmpty() && !p.isEmpty() && !q.isEmpty() && !r.isEmpty() && !s.isEmpty() && !t.isEmpty() && !u.isEmpty()){
+                calcular.setEnabled(true);
+            } else{
+                calcular.setEnabled(false);
+            }
 
-        } else{
-            peso3.setError("preenca todos os campos");
-            peso3.requestFocus();
-        }
-        if(!TextUtils.isEmpty(peso4.getText().toString())){
-            retorno = true;
 
-        } else{
-            peso4.setError("preenca todos os campos");
-            peso4.requestFocus();
-        }
-        if(!TextUtils.isEmpty(peso5.getText().toString())){
-            retorno = true;
 
-        } else{
-            peso5.setError("preenca todos os campos");
-            peso5.requestFocus();
-        }
-        if(!TextUtils.isEmpty(peso6.getText().toString())){
-            retorno = true;
-
-        } else{
-            peso6.setError("preenca todos os campos");
-            peso6.requestFocus();
-        }
-        if(!TextUtils.isEmpty(peso7.getText().toString())){
-            retorno = true;
-
-        } else{
-            peso7.setError("preenca todos os campos");
-            peso7.requestFocus();
-        }
-        if(!TextUtils.isEmpty(peso8.getText().toString())){
-            retorno = true;
-
-        } else{
-            peso8.setError("preenca todos os campos");
-            peso8.requestFocus();
-        }
-        if(!TextUtils.isEmpty(peso9.getText().toString())){
-            retorno = true;
-
-        } else{
-            peso9.setError("preenca todos os campos");
-            peso9.requestFocus();
-        }
-        if(!TextUtils.isEmpty(peso10.getText().toString())){
-            retorno = true;
-
-        } else{
-            peso10.setError("preenca todos os campos");
-            peso10.requestFocus();
-        }
-        if(!TextUtils.isEmpty(peso1.getText().toString())){
-            retorno = true;
-
-        } else{
-            peso1.setError("preenca todos os campos");
-            peso1.requestFocus();
         }
 
-        if(!TextUtils.isEmpty(qt2.getText().toString())){
-            retorno = true;
+        @Override
+        public void afterTextChanged(Editable editable) {
 
-        } else{
-            qt2.setError("preenca todos os campos");
-            qt2.requestFocus();
         }
-        if(!TextUtils.isEmpty(qt3.getText().toString())){
-            retorno = true;
-
-        } else{
-            qt3.setError("preenca todos os campos");
-            qt3.requestFocus();
-        }
-        if(!TextUtils.isEmpty(qt4.getText().toString())){
-            retorno = true;
-
-        } else{
-            qt4.setError("preenca todos os campos");
-            qt4.requestFocus();
-        }
-        if(!TextUtils.isEmpty(qt5.getText().toString())){
-            retorno = true;
-
-        } else{
-            qt5.setError("preenca todos os campos");
-            qt5.requestFocus();
-        }
-        if(!TextUtils.isEmpty(qt6.getText().toString())){
-            retorno = true;
-
-        } else{
-            qt6.setError("preenca todos os campos");
-            qt6.requestFocus();
-        }
-        if(!TextUtils.isEmpty(qt7.getText().toString())){
-            retorno = true;
-
-        } else{
-            qt7.setError("preenca todos os campos");
-            qt7.requestFocus();
-        }
-        if(!TextUtils.isEmpty(qt8.getText().toString())){
-            retorno = true;
-
-        } else{
-            qt8.setError("preenca todos os campos");
-            qt8.requestFocus();
-        }
-        if(!TextUtils.isEmpty(qt9.getText().toString())){
-            retorno = true;
-
-        } else{
-            qt9.setError("preenca todos os campos");
-            qt9.requestFocus();
-        }
-        if(!TextUtils.isEmpty(qt10.getText().toString())){
-            retorno = true;
-
-        } else{
-            qt10.setError("preenca todos os campos");
-            qt10.requestFocus();
-        }
-
-
-        return retorno;
-    }
+    };
 
 }
